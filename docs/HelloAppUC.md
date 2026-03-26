@@ -89,3 +89,52 @@ if (args.length > 0) {
 } else {
     System.out.println("Hello World");
 }
+
+
+---
+
+## UC3: Optional Argument Handling with Default Greeting
+
+### Description
+This use case enhances UC2 by handling cases where no command-line argument is provided. A default name "Guest" is used to ensure the program always produces a meaningful output.
+
+---
+
+### Disadvantages of Previous Use Case
+UC2 required user input to display a personalized greeting and defaulted to "Hello World", which is inconsistent.
+
+---
+
+### Preconditions
+- Java program is compiled.
+- User may or may not provide a command-line argument.
+
+---
+
+### Main Flow
+1. User runs the program.
+2. Program checks if arguments are provided.
+3. If yes → prints "Hello <name>".
+4. If no → prints "Hello Guest".
+5. Program exits.
+
+---
+
+### Post Conditions
+- Program always displays a greeting message.
+- Default value is used when input is missing.
+
+---
+
+### Code Snippet
+
+```java
+String name;
+
+if (args.length > 0) {
+    name = args[0];
+} else {
+    name = "Guest";
+}
+
+System.out.println("Hello " + name);
