@@ -138,3 +138,45 @@ if (args.length > 0) {
 }
 
 System.out.println("Hello " + name);
+
+---
+
+## UC4: Handle Multiple Command-Line Names
+
+### Description
+This use case extends UC3 by allowing multiple names to be passed as command-line arguments. The program prints a greeting for each name.
+
+---
+
+### Disadvantages of Previous Use Case
+UC3 supports only a single name input and cannot process multiple users in one execution.
+
+---
+
+### Preconditions
+- Java program is compiled.
+- User provides one or more names as command-line arguments.
+
+---
+
+### Main Flow
+1. User runs the program with multiple names.
+2. Program checks if arguments exist.
+3. Iterates through each argument.
+4. Prints greeting for each name.
+5. If no arguments → prints "Hello Guest".
+
+---
+
+### Post Conditions
+- Greeting is displayed for all provided names.
+- Default greeting is shown if no input is given.
+
+---
+
+### Code Snippet
+
+```java
+for (String name : args) {
+    System.out.println("Hello " + name);
+}
